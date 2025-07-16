@@ -1,12 +1,13 @@
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\bin\Debug\net9.0\Movies.Core.deps.json
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\bin\Debug\net9.0\Movies.Core.dll
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\bin\Debug\net9.0\Movies.Core.pdb
+C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.csproj.AssemblyReference.cache
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.AssemblyInfoInputs.cache
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.AssemblyInfo.cs
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.csproj.CoreCompileInputs.cache
+C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.sourcelink.json
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.dll
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\refint\Movies.Core.dll
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.pdb
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\ref\Movies.Core.dll
-C:\Users\natta\Desktop\lexicon\Movies\Movies.Core\obj\Debug\net9.0\Movies.Core.csproj.AssemblyReference.cache
