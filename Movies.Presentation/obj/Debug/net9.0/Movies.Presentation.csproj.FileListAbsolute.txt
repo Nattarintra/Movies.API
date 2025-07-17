@@ -14,3 +14,5 @@ C:\Users\natta\Desktop\lexicon\Movies\Movies.Presentation\bin\Debug\net9.0\Movie
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Presentation\bin\Debug\net9.0\Movies.Core.pdb
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Presentation\obj\Debug\net9.0\Movies.Presentation.csproj.AssemblyReference.cache
 C:\Users\natta\Desktop\lexicon\Movies\Movies.Presentation\obj\Debug\net9.0\Movies.P.7ED9FB3C.Up2Date
+C:\Users\natta\Desktop\lexicon\Movies\Movies.Presentation\bin\Debug\net9.0\Movies.Data.dll
+C:\Users\natta\Desktop\lexicon\Movies\Movies.Presentation\bin\Debug\net9.0\Movies.Data.pdb
