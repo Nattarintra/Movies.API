@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Movies.API.Data.Configurations;
 using Movies.Core.Entities;
 
-namespace Movies.API.Data
+namespace Movies.Data.Contexts
 {
     public class ApplicationDbContext : DbContext
     {

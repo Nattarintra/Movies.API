@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Movies.API.Data;
 using Movies.API.Services;
+using Movies.Data.Contexts;
 
 namespace Movies.API
 {

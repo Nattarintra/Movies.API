@@ -10,8 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Movies.Data.Contexts;
 
-namespace Movies.API.Controllers
+namespace Movies.Presentation.Controllers
 {
     [Route("api/movies")]
     [ApiController]
@@ -37,17 +38,16 @@ namespace Movies.API.Controllers
         }
 
         // GET: api/Movies/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Movie>> GetMovie(Guid id)
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<MovieDto>> GetMovie(Guid id)
         {
-            var movie = await _context.Movies.FindAsync(id);
+            var movie = await _context.Movies.Include(m => m.MovieDetails).FirstOrDefaultAsync(m => m.Id == id);
 
-            if (movie == null)
-            {
-                return NotFound();
-            }
+            if (movie == null) return NotFound();
 
-            return movie;
+            var movieDto = _mapper.Map<MovieDto>(movie);
+
+            return Ok(movieDto);
         }
 
         // PUT: api/Movies/5

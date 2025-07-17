@@ -1,9 +1,9 @@
-﻿using Movies.Contracts;
+﻿//using Movies.Contracts;
 
 namespace Movies.Services
 {
-    public class MovieService : IMovieService
-    {
+    //public class MovieService : IMovieService
+    //{
         
-    }
+    //}
 }

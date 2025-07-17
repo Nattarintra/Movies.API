@@ -6,10 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Movies.API.Data;
+using Movies.Data.Contexts;
 
 #nullable disable
 
-namespace Movies.API.Migrations
+namespace Movies.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250714132117_Init")]

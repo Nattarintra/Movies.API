@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Movies.API.Data;
 using Movies.Core.Entities;
 using Movies.API.Services.DataSeeders;
+using Movies.Data.Contexts;
 
 namespace Movies.API.Services
 {
