@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Movies.Contracts\Movies.Contracts.csproj" />
+    <ProjectReference Include="..\Movies.Core\Movies.Core.csproj" />
+  </ItemGroup>
+
 </Project>

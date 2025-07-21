@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Core.Dtos
 {
-    internal class MovieDetailDto
+    public class MovieDetailDto
     {
         [MaxLength(30)]
         public string Title { get; set; } = null!;

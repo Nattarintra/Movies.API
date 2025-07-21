@@ -11,6 +11,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Movies.Data.Contexts;
+using Movies.Core.DomainContracts;
+using Movies.Contracts;
+using Microsoft.Azure.SignalR.Management;
+using IServiceManager = Movies.Contracts.IServiceManager;
+
 
 namespace Movies.Presentation.Controllers
 {
@@ -18,38 +23,46 @@ namespace Movies.Presentation.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        private readonly IMapper _mapper;
+        
+        private readonly IServiceManager _service;
 
-        public MoviesController(ApplicationDbContext context, IMapper mapper)
+        public MoviesController(IServiceManager service)
         {
-            _context = context;
-            _mapper = mapper;
-        }
+           
+            _service = service;
 
+        }
         // GET: api/Movies
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovie()
+        //{
+        //    var movieDtos = await _mapper.ProjectTo<MovieDto>(_context.Movies).ToListAsync();
+
+        //    return Ok(movieDtos);
+
+        //}
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovie()
         {
-            var movieDtos = await _mapper.ProjectTo<MovieDto>(_context.Movies).ToListAsync();
+            var movies = await _service.Movies.GetAllAsync();
 
-            return Ok(movieDtos);
-
+            return Ok(movies);
         }
+
 
         // GET: api/Movies/5
-        [HttpGet("{id:guid}")]
-        public async Task<ActionResult<MovieDto>> GetMovie(Guid id)
-        {
-            var movie = await _context.Movies.Include(m => m.MovieDetails).FirstOrDefaultAsync(m => m.Id == id);
+        /* [HttpGet("{id:guid}")]
+         public async Task<ActionResult<MovieDto>> GetMovie(Guid id)
+         {
+             var movie = await _context.Movies.Include(m => m.MovieDetails).FirstOrDefaultAsync(m => m.Id == id);
 
-            if (movie == null) return NotFound();
+             if (movie == null) return NotFound();
 
-            var movieDto = _mapper.Map<MovieDto>(movie);
+             var movieDto = _mapper.Map<MovieDto>(movie);
 
-            return Ok(movieDto);
-        }
-
+             return Ok(movieDto);
+         }*/
+        /*
         // PUT: api/Movies/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -107,10 +120,10 @@ namespace Movies.Presentation.Controllers
 
             return NoContent();
         }
-
+        
         private bool MovieExists(Guid id)
         {
             return _context.Movies.Any(e => e.Id == id);
-        }
+        }*/
     }
 }

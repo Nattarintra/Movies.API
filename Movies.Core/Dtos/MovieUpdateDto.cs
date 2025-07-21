@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Core.Dtos
 {
-    internal class MovieUpdateDto
+    public class MovieUpdateDto
     {
         [MaxLength(30)]
         [Required(ErrorMessage = "The movie must have a name.")]

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Core.Dtos
 {
-    internal record MovieCreateDto
+    public record MovieCreateDto
     {
         public Guid Id { get; set; }
 

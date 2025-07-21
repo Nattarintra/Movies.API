@@ -1,8 +1,14 @@
+using Microsoft.Azure.SignalR.Management;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Movies.API.Data;
 using Movies.API.Services;
+using Movies.Core.DomainContracts;
 using Movies.Data.Contexts;
+using Movies.Data.Repositories;
+
+using IServiceManager = Movies.Contracts.IServiceManager;
+using ServiceManager = Movies.Services.ServiceManager;
 
 namespace Movies.API
 {
@@ -22,10 +28,13 @@ namespace Movies.API
             builder.Services.AddOpenApi();
             builder.Services.AddHostedService<DataSeedHostingService>();
             builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MapperProfile>());
-           
+            
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            builder.Services.AddScoped<IServiceManager, ServiceManager>(); // issue here on step 5 
+
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();

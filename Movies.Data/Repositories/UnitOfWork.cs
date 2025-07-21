@@ -14,14 +14,14 @@ namespace Movies.Data.Repositories
         private readonly ApplicationDbContext _context;
 
         public IMovieRepository Movies { get; }
-        public IActorRepository Actors { get; }
-        public IReviewRepository Reviews { get; }
+       // public IActorRepository Actors { get; }
+       // public IReviewRepository Reviews { get; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
             Movies = new MovieRepository(context);
-            //Actors = new ActorRepository(context);
+            //Actors = new ActorRepository(context); // link IUnitOfWork to 
             //Reviews = new ReviewRepository(context);
         }
 
