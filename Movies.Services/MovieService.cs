@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Movies.Services
 {
     // have 2 MovieService.cs and MovieService.cs from root folder
-    public class MovieService : IMovieService // Maybe something wrong here,
+    public class MovieService : IMovieService 
     {
         // ทำงานยังไง? Service เรียก UnitOfWork.Movies.Add(movie) แล้วสุดท้ายเรียก UnitOfWork.CompleteAsync() เพื่อบันทึกจริง
         // เรียก UnitOfWork.CompleteAsync() Torn Nai?

@@ -2,7 +2,7 @@ using Microsoft.Azure.SignalR.Management;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Movies.API.Data;
-using Movies.API.Services;
+using Movies.API.HostedServices;
 using Movies.Core.DomainContracts;
 using Movies.Data.Contexts;
 using Movies.Data.Repositories;

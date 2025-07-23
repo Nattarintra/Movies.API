@@ -1,7 +1,7 @@
 ﻿using Bogus;
 using Movies.Core.Entities;
 
-namespace Movies.API.Services.DataSeeders
+namespace Movies.Data.DataSeeders
 {
     public static class ReviewGenerator
     {

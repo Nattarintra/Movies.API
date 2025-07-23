@@ -198,6 +198,10 @@
               "target": "Package",
               "version": "[15.0.1, )"
             },
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.6.3, )"
+            },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[9.0.0, )"

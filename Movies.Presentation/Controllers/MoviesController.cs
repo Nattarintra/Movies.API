@@ -32,15 +32,7 @@ namespace Movies.Presentation.Controllers
             _service = service;
 
         }
-        // GET: api/Movies
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovie()
-        //{
-        //    var movieDtos = await _mapper.ProjectTo<MovieDto>(_context.Movies).ToListAsync();
-
-        //    return Ok(movieDtos);
-
-        //}
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovie()
         {

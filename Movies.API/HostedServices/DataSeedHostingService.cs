@@ -1,11 +1,8 @@
-﻿using Bogus;
-using Microsoft.EntityFrameworkCore;
-using Movies.API.Data;
-using Movies.Core.Entities;
-using Movies.API.Services.DataSeeders;
+﻿using Microsoft.EntityFrameworkCore;
 using Movies.Data.Contexts;
+using Movies.Data.DataSeeders;
 
-namespace Movies.API.Services
+namespace Movies.API.HostedServices
 {
     public class DataSeedHostingService : IHostedService
     {
@@ -21,7 +18,6 @@ namespace Movies.API.Services
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             using var scope = _serviceProvider.CreateScope();
-
             var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
             if (!env.IsDevelopment()) return;
 

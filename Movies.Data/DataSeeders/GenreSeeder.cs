@@ -1,7 +1,6 @@
-﻿using Movies.API.Data;
-using Movies.Core.Entities;
+﻿using Movies.Core.Entities;
 
-namespace Movies.API.Services.DataSeeders
+namespace Movies.Data.DataSeeders
 {
     public static class GenreSeeder
     {
